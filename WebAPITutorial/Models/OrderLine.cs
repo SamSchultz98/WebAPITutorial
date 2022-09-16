@@ -1,4 +1,6 @@
-﻿namespace WebAPITutorial.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WebAPITutorial.Models
 {
     public class OrderLine
     {
@@ -13,8 +15,8 @@
         public virtual Product? Product { get; set; }
 
 
-
-        public int MyProperty { get; set; }
+        [Column(TypeName ="Decimal(11,2)")]
+        public decimal Price { get; set; }
 
 
     }

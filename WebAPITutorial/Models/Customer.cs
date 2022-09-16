@@ -7,13 +7,14 @@ namespace WebAPITutorial.Models
     [Index("Code", IsUnique = true)]    //Need this code in order to mark a column as unique
     public class Customer
     {
+        [Key]
         public int Id { get; set; }         //PK
 
         [StringLength(140)]
         public string Name { get; set; }
 
         [StringLength(4)]
-        public int Code { get; set; }
+        public string Code { get; set; }
 
         [Column(TypeName ="Decimal (11,2)")]    //This will line up what type of data this prop has
         public decimal Sales { get; set; }

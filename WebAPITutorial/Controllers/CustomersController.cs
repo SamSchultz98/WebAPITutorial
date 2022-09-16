@@ -49,7 +49,7 @@ namespace WebAPITutorial.Controllers
             return customer;
         }
 
-        // PUT: api/Customers/5
+        // PUT: api/Customers/{id}
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomer(int id, Customer customer)
@@ -95,8 +95,9 @@ namespace WebAPITutorial.Controllers
             return CreatedAtAction("GetCustomer", new { id = customer.Id }, customer);
         }
 
-        // DELETE: api/Customers/5
-        [HttpDelete("{id}")]
+        // DELETE: api/Customers/{id}
+        [HttpDelete("{id}")]    //You can put stuff before and after the id to make the url unique anything outside the curly braces
+        //dont start with a slash, only include slashes after the first added word
         public async Task<IActionResult> DeleteCustomer(int id)
         {
             if (_context.Customers == null)

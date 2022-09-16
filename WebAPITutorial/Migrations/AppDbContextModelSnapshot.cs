@@ -52,7 +52,7 @@ namespace WebAPITutorial.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("WebAPITutorial.Models.Order", b =>
@@ -86,7 +86,7 @@ namespace WebAPITutorial.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("WebAPITutorial.Models.OrderLine", b =>
@@ -112,7 +112,7 @@ namespace WebAPITutorial.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderLines");
+                    b.ToTable("OrderLines", (string)null);
                 });
 
             modelBuilder.Entity("WebAPITutorial.Models.Product", b =>
@@ -133,7 +133,7 @@ namespace WebAPITutorial.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("WebAPITutorial.Models.Order", b =>

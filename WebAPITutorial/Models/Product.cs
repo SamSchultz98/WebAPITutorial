@@ -12,5 +12,7 @@ namespace WebAPITutorial.Models
 
         [Column(TypeName ="Decimal(11,2)")]
         public decimal Price { get; set; }
+
+        public virtual IEnumerable<OrderLine> OrderLines { get; set; }
     }
 }

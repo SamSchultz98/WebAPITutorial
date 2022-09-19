@@ -19,7 +19,7 @@ builder.Services.AddCors();     //Need this in order to UseCors to open up the s
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-app.UseCors(x =>            //The following opens the secruity all the way open
+app.UseCors(x =>            //The following opens the secruity all the way open. (Would not do this outside educational setting)
 {
     x.AllowAnyOrigin()
     .AllowAnyHeader()
